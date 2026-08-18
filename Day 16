@@ -1,0 +1,173 @@
+class Node {
+        }
+
+        // Print sorted list
+        current = head;
+
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+    }
+}
+
+
+class Node {
+    int data;
+    Node prev;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.prev = null;
+        this.next = null;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+        Node fourth = new Node(40);
+
+        // Connect nodes
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        third.next = fourth;
+        fourth.prev = third;
+
+        // Insert 25 after 20
+        Node newNode = new Node(25);
+
+        Node current = second;
+
+        newNode.prev = current;
+        newNode.next = current.next;
+
+        current.next.prev = newNode;
+        current.next = newNode;
+
+        // Print list
+        current = head;
+
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+    }
+}
+
+class Node {
+    int data;
+    Node prev, next;
+
+    Node(int data) {
+        this.data = data;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        int sum = 0;
+        Node current = head;
+
+        while (current != null) {
+            sum += current.data;
+            current = current.next;
+        }
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+ class Node {
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+        Node fourth = new Node(40);
+
+        // Connect forward
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        third.next = fourth;
+        fourth.prev = third;
+
+        // Step 1: Go to the last node
+        Node current = head;
+
+        while (current.next != null) {
+            current = current.next;
+        }
+
+        // Step 2: Move backwards using prev
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.prev;
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Node head = new Node(10);
+        Node second = new Node(20);
+        Node third = new Node(30);
+        Node fourth = new Node(40);
+
+        // Connect nodes
+        head.next = second;
+        second.prev = head;
+
+        second.next = third;
+        third.prev = second;
+
+        third.next = fourth;
+        fourth.prev = third;
+
+        // Insert 25 after 20
+        Node newNode = new Node(25);
+
+        Node current = second;
+
+        newNode.prev = current;
+        newNode.next = current.next;
+
+        current.next.prev = newNode;
+        current.next = newNode;
+
+        // Print list
+        current = head;
+
+        while (current != null) {
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+    }
+}
